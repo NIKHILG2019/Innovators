@@ -23,3 +23,4 @@ class User(UserMixin, db.Model):
         # self.email_confirmed = False
         # self.email_confirmed_on = None
 
+
