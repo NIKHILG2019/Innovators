@@ -1,0 +1,652 @@
+<html>
+<head>
+	<title>Company Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+	.navbar-custom { 
+            background-color: #FBB62D; 
+			font-size:21px;
+			font-family:"TIMES NEW ROMAN";
+			
+        }
+	.navbar-custom-1 { 
+           
+			font-size:45px;
+			font-family:"TIMES NEW ROMAN";
+			
+        }	
+	.nav-link
+		{
+		font-weight:700;color:#2A2523
+		}
+	.card
+	{
+		font-size:21px;
+  transition: box-shadow .3s;
+			 
+			  border-radius:10px;
+			  border: 1px solid #ccc;
+			  background: #fff;
+			  
+			font-family: 'Ranchers', cursive;
+	} 
+  .card:hover{
+    box-shadow: 11px 11px 11px rgba(33,33,33,.2);
+		background-color:#FFEAE4;;
+}
+	</style>
+    <link rel="stylesheet" href="templates/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="templates/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <p class="navbar-brand" >Job Portal</p>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ url_for('main.index') }}">Company Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.index') }}">Test Your Skills</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form method="POST" action="{{ url_for('auth.logout') }}">
+                <button class="btn btn-outline-danger justify-content-end" type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<form action="{{ url_for('main.index') }}" method="GET">
+    <button type="submit">
+        <input type="text" name="company" value="Infosys" hidden />
+    <div class="card">>
+ <div class="container">
+    <b>Infosys</b>
+  </div>
+</div>
+    </button>
+</form>
+
+
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                    <h3>About Comapny</h3>
+                    <p>
+	&nbsp;Infosys Limited is an Indian multinational corporation that provides business consulting, information technology and outsourcing services. It has its headquarters in Bangalore, Karnataka, India.</p>
+<div>
+	Infosys helps clients in 45 countries to create and execute different strategies for their digital transformation. Infosys helps businesses to renew &amp; improve existing conditions so that their business can achieve higher efficiencies and stay relevant according to current times.&nbsp;</div>
+<div>
+	Infosys is also famous for its the <strong>best IT training in the world</strong>, with lavish center in Mysore. Every year infosys intake thousands of students in bulk, train them for <strong>6 months paid training</strong> in <strong>Mysore</strong> and then, on the basis of performance and preference allocate them centers across country with varied profiles.&nbsp;</div>
+
+</div>
+
+<section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Overview</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                            <p>
+	Infosys begins its&nbsp;<strong>on-campus</strong>&nbsp;<strong>recruitments</strong>&nbsp;from&nbsp;<strong>early September</strong>. During<strong>&nbsp;July and August</strong>, they continue with their&nbsp;<strong>off-campus activities</strong>. If you<strong>&nbsp;fail in the first attempt</strong>, you can retake the exam after&nbsp;<strong>one month’s time</strong>.&nbsp;You can reappear for the certification examination&nbsp;after a month. However, upon<strong>&nbsp;two unsuccessful attempts,</strong>&nbsp;you will need to wait for<strong>&nbsp;3 months</strong>&nbsp;to reappear for the next attempt. The level of exam is&nbsp;<strong>moderate to difficult</strong>.</p>
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Hiring Criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                            <p color:="" font-size:="" font-weight:="" line-height:="" pt="" text-align:="" text-rendering:="">
+	<strong>Eligibility Criteria&nbsp;</strong></p>
+<p>
+	If you are dreaming of working with Infosys, you are at the right place. Infosys&nbsp;is one of the top recruiters in India in the field of information technology, therefore it is imperative for the aspirants to know the company's eligibility criteria. Read on to find out Infosys selection policies, graduation criteria, academic criteria and documents needed for applying for the positions of Systems Engineer Trainee / Software Engineer trainee at Infosys. Infosys<strong>&nbsp;Off Campus Recruitment has same eligibility criteria.</strong></p>
+<h2>
+	&nbsp;</h2>
+<p>
+	<strong>Graduation Criteria</strong></p>
+<p>
+	1) B.E / B.Tech&nbsp; in any discipline (CSE/ECE/IT/CIVIL/ME/EEE/Automobile/Aeronautical etc.)</p>
+<p>
+	2) M.Sc graduates in Computer Science/ Information technology can apply.</p>
+<p>
+	3) MCA graduates are also eligible to apply.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>Academic Criteria</strong></p>
+<p>
+	1) A candidate must have more than 60% marks in 10th and 12th (or diploma).</p>
+<p>
+	2) A candidate must have a minimum of 65% marks or CGPA 6.5 in graduation.</p>
+<p>
+	3) A maximum of 2 years of gap is permissible in the entire education.</p>
+<p>
+	4) A candidate should not have any pending backlogs at the time of appearing for Infosys selection process.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>Infosys policies</strong></p>
+<p>
+	1) If a candidate has attended an interview within the past 9 months from the date of new application, then he/ she is ineligible to apply.</p>
+<p>
+	2) If a candidate has been rejected by Infosys in an interview, then the candidate is ineligible to apply again for a period of 9 months after the interview.</p>
+<p>
+	3) If for some reason Infosys has terminated the candidate's application, then the candidate is ineligible to apply.&nbsp;</p>
+<p>
+	4) If for any reason a candidate after applying in Infosys, misses the opportunity to give the interview then the candidate holds the right to apply again and can attend the selection process.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>Documents required</strong></p>
+<p>
+	1) All original mark sheets related to SSC/CBSC (10th Class), Intermediate(12th Standard) and Graduation are required to be produced at the time of interview. Also, please carry a copy of set of all documents at the time of interview.</p>
+<p>
+	2) A copy of candidate's updated resume.</p>
+<p>
+	3) Passport size photographs.</p>
+<p>
+	4) An original identification proof issued by the government of India (Aadhar Card, Pan Card, Voter id, Passport etc.)</p>
+<p>
+	&nbsp;</p>
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+  <section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Selection Process</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                            <div>
+	<p>
+		Infosys has a simple process of online aptitude test followed by technical interview of the shortlisted candidate. The profile is usually of System Engineers with 3.6 LPA package. Infosys does have a bond of 1 year after the training is over of 1.25 LPA as amount against it. The training is in Mysore with facilities of hostel, mess etc. and you would get around 13K-14K in hand. The aptitude test result is declared after 3-4 hours followed by technical interview the very next day.</p>
+</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>INTERVIEW</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>Technical Interview</strong></div>
+<div>
+	<p>
+		The questions are entirely based on the technologies mentioned in the Job Description. The candidate might be asked to write a piece of code, or an algorithm to demonstrate the knowledge required in the particular field. Questions might also be based on the tools and technologies used in past projects</p>
+	<p>
+		&nbsp;</p>
+	<p>
+		<strong>&nbsp;HR Interview</strong></p>
+	<p>
+		It helps to determine a candidate's personality. Questions can be of wide range starting from your introduction, Qualification, Experience, Industry specific experience, Courses done, your strengths and weaknesses, salary expectations, friends, family etc. . Be ready to take questions based on your CV - internships, projects, volunteerships and co-curricular activities.</p>
+	<p>
+		Never say No when interviewer asks - Do you have any questions for me? Ask about company's culture and progress associated or something you wnat to know.</p>
+</div>
+<p>
+	&nbsp;</p>
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Pattern</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                            <p style="user-select: initial !important;">
+	Infosys Recruitment process includes a selection stage when decisions are made as to the viability of a particular candidate's job application.The process of selecting candidates focuses on abilities, knowledge, skills, experience and various other related factors.Infosys Test Papers and Infosys Sample Papers&nbsp;are of moderate to high in difficulty level.&nbsp;</p>
+<p style="user-select: initial !important;">
+	&nbsp;</p>
+<p style="user-select: initial !important;">
+	Stages of selection process to get recruited in Infosys:</p>
+<ul style="user-select: initial !important;">
+	<li style="user-select: initial !important;">
+		Online Aptitude Test</li>
+	<li style="user-select: initial !important;">
+		Infosys Interview Process
+		<ul style="user-select: initial !important;">
+			<li style="user-select: initial !important;">
+				Technical Round</li>
+			<li style="user-select: initial !important;">
+				HR Round</li>
+		</ul>
+	</li>
+</ul>
+<p style="user-select: initial !important;">
+	&nbsp;</p>
+<ol style="user-select: initial !important;">
+	<li style="user-select: initial !important;">
+		There is no negative marking.</li>
+	<li style="user-select: initial !important;">
+		There is sectional cut off (60-70% approx).</li>
+</ol>
+<p style="user-select: initial !important;">
+	&nbsp;</p>
+<table border="1" cellpadding="1" cellspacing="1" style="user-select: initial !important;width: 1200px">
+	<tbody style="user-select: initial !important;">
+		<tr style="user-select: initial !important;">
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="user-select: initial !important;"><span style="font-size: 14px; user-select: initial !important;"><b style="user-select: initial !important;">Section</b></span></span></span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="user-select: initial !important;"><span style="font-size: 14px; user-select: initial !important;"><b style="user-select: initial !important;">No of questions</b></span></span></span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="user-select: initial !important;"><span style="font-size: 14px; user-select: initial !important;"><b style="user-select: initial !important;">Time Duration&nbsp;</b></span></span></span></td>
+		</tr>
+		<tr style="user-select: initial !important;">
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">Quantitative Aptitude</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">10</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">25 mins</span></td>
+		</tr>
+		<tr style="user-select: initial !important;">
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">Logical Reasoning</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">15</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">35 mins</span></td>
+		</tr>
+		<tr style="user-select: initial !important;">
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">Verbal Ability</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">40</span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(128, 0, 0);">35 mins</span></td>
+		</tr>
+		<tr style="user-select: initial !important;">
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px; user-select: initial !important;"><strong style="user-select: initial !important;">Total</strong></span></span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px; user-select: initial !important;"><strong style="user-select: initial !important;">65</strong></span></span></td>
+			<td style="user-select: initial !important; text-align: center;">
+				<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px; user-select: initial !important;"><strong style="user-select: initial !important;">95 mins</strong></span></span></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    <section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Syllabus</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                            <table border="1" cellpadding="1" cellspacing="1" style="width: 100%">
+	<tbody>
+		<tr>
+			<td>
+				<strong>Quantitaive Aptitude</strong></td>
+			<td>
+				<strong>Logical Reasoning</strong></td>
+			<td>
+				<strong>English Verbal</strong></td>
+			<td>
+				<strong>Technical</strong></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;">
+				<ul>
+					<li style="text-align: justify;">
+						Boats and Streams</li>
+					<li style="text-align: justify;">
+						Partnership</li>
+					<li style="text-align: justify;">
+						Ratio and Proportion</li>
+					<li style="text-align: justify;">
+						Averages</li>
+					<li style="text-align: justify;">
+						Pipes and Cistern</li>
+					<li style="text-align: justify;">
+						Simple Equations</li>
+					<li style="text-align: justify;">
+						Quadratic Equations</li>
+					<li style="text-align: justify;">
+						Mixtures and Allegations</li>
+					<li style="text-align: justify;">
+						Percentages</li>
+					<li style="text-align: justify;">
+						Problems on Numbers</li>
+					<li style="text-align: justify;">
+						Compound Interest</li>
+					<li style="text-align: justify;">
+						Volumes</li>
+					<li style="text-align: justify;">
+						Profit and Loss</li>
+					<li style="text-align: justify;">
+						Odd Man Out</li>
+					<li style="text-align: justify;">
+						Races and Games</li>
+					<li style="text-align: justify;">
+						Numbers and Ages</li>
+					<li style="text-align: justify;">
+						Simplification and Approximation</li>
+					<li style="text-align: justify;">
+						Indices and Surds</li>
+					<li style="text-align: justify;">
+						Mensuration</li>
+					<li style="text-align: justify;">
+						Permutations and Combinations</li>
+					<li style="text-align: justify;">
+						Probability</li>
+					<li style="text-align: justify;">
+						Time and Work</li>
+					<li style="text-align: justify;">
+						Time and Distance</li>
+					<li style="text-align: justify;">
+						Problems on L.C.M and H.C.F</li>
+					<li style="text-align: justify;">
+						Simple Interest</li>
+					<li style="text-align: justify;">
+						Areas</li>
+					<li style="text-align: justify;">
+						Problems on Trains</li>
+				</ul>
+			</td>
+			<td style="vertical-align: top;">
+				<ul>
+					<li>
+						Number Series</li>
+					<li>
+						Clock Puzzles</li>
+					<li>
+						Calendars</li>
+					<li>
+						Non-Verbal reasoning Series</li>
+					<li>
+						The Embedded Figure</li>
+					<li>
+						Classification</li>
+					<li>
+						Water Images</li>
+					<li>
+						Mirror Images</li>
+					<li>
+						Completion of Incomplete Pattern</li>
+					<li>
+						Analytical Reasoning</li>
+					<li>
+						Verbal Reasoning</li>
+					<li>
+						Verbal Classification,</li>
+					<li>
+						Analogies</li>
+					<li>
+						Logical Games</li>
+					<li>
+						Logical Problems</li>
+					<li>
+						Missing Letters</li>
+					<li>
+						Matching Definitions</li>
+					<li>
+						Data Sufficiency</li>
+					<li>
+						Data Interpretation.</li>
+				</ul>
+			</td>
+			<td style="vertical-align: top;">
+				<ul>
+					<li>
+						Active and Passive Voice</li>
+					<li>
+						Spelling Test</li>
+					<li>
+						Spotting Errors</li>
+					<li>
+						Passage Completion</li>
+					<li>
+						Substitution</li>
+					<li>
+						Sentence Arrangement</li>
+					<li>
+						Transformation</li>
+					<li>
+						Idioms and Phrases</li>
+					<li>
+						Sentence Improvement</li>
+					<li>
+						Para Completion</li>
+					<li>
+						Joining Sentences</li>
+					<li>
+						Error Correction (Underlined Part)</li>
+					<li>
+						Error Correction (Phrase in Bold)</li>
+					<li>
+						Fill in the blanks</li>
+					<li>
+						Articles</li>
+					<li>
+						Adjectives</li>
+					<li>
+						Gerunds</li>
+					<li>
+						Homophones</li>
+					<li>
+						Identify the Errors</li>
+					<li>
+						Identify the Sentences</li>
+					<li>
+						Plural Forms</li>
+					<li>
+						Nouns</li>
+					<li>
+						Odd Words</li>
+					<li>
+						Prefix</li>
+					<li>
+						Prepositions</li>
+					<li>
+						Sentence Pattern</li>
+					<li>
+						Suffix</li>
+					<li>
+						Tag Questions</li>
+					<li>
+						Tense</li>
+					<li>
+						Synonyms</li>
+					<li>
+						Antonyms</li>
+					<li>
+						Prepositions</li>
+					<li>
+						Sentence Completion</li>
+				</ul>
+			</td>
+			<td style="vertical-align: top;">
+				<ul>
+					<li>
+						C++</li>
+					<li>
+						C</li>
+					<li>
+						Linux</li>
+					<li>
+						DBMS</li>
+					<li>
+						PHP</li>
+					<li>
+						Java</li>
+					<li>
+						Operating System</li>
+					<li>
+						Computer Networks</li>
+					<li>
+						.Net</li>
+					<li>
+						Cloud Computing</li>
+					<li>
+						Data Structure</li>
+					<li>
+						HTML</li>
+					<li>
+						Javascript</li>
+					<li>
+						Database</li>
+					<li>
+						Networks etc.</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+<footer class="bg-dark text-center text-lg-start text-white" style="font-family:TIMES NEW ROMAN">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Student Tracker</h5>
+
+        <p>
+          Tracking
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <a href="/" class="text-white nav-link"><h5 class="text-uppercase ">Home</h5></a>
+
+        <ul class="list-unstyled mb-0">
+		
+          <li>
+            <a href="/menu" class="text-white nav-link">About us</a>
+          </li>
+          
+          <li>
+            <a href="/login" class="text-white nav-link">Login</a>
+          </li>
+		   <li>
+            <a href="/contact" class="text-white nav-link">Contact US</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0 text-white nav-link">Reach Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="text-white nav-link"><i style="font-size:1em;color:Tomato"class="fa fa-envelope " aria-hidden="true"></i>contactusatbonappetit@gmail.com</a>
+          </li>
+          <li>
+            <a href="#" class="text-white nav-link"><i style="font-size:1em;color:Tomato"class="fa fa-phone" aria-hidden="true"></i>161661166</a>
+          </li>
+          
+        </ul>
+		<form class="d-flex">
+      <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn" style="color:Tomato"type="submit">Search</button>
+    </form>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);font-family:TIMES NEW ROMAN;">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/" style="font-family:TIME NEW ROMAN">BONAppetit.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>

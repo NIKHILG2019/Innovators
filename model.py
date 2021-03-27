@@ -24,3 +24,11 @@ class User(UserMixin, db.Model):
         # self.email_confirmed_on = None
 
 
+class Company(db.Model):
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True, nullable=False)
+    company_name = db.Column(db.VARCHAR(50), nullable=False)
+    company_data = db.Column(db.JSON, nullable=False)
+
+    def __init__(self, company_name, company_data):
+        self.company_name = company_name,
+        self.company_data = company_data

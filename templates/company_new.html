@@ -1,0 +1,272 @@
+<html>
+<head>
+	<title>Company Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+	.navbar-custom { 
+            background-color: #FBB62D; 
+			font-size:21px;
+			font-family:"TIMES NEW ROMAN";
+			
+        }
+	.navbar-custom-1 { 
+           
+			font-size:45px;
+			font-family:"TIMES NEW ROMAN";
+			
+        }	
+	.nav-link
+		{
+		font-weight:700;color:#2A2523
+		}
+	.card
+	{
+		font-size:21px;
+  transition: box-shadow .3s;
+			 
+			  border-radius:10px;
+			  border: 1px solid #ccc;
+			  background: #fff;
+			  
+			font-family: 'Ranchers', cursive;
+	} 
+  .card:hover{
+    box-shadow: 11px 11px 11px rgba(33,33,33,.2);
+		background-color:#FFEAE4;;
+}
+	</style>
+    <link rel="stylesheet" href="templates/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="templates/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <p class="navbar-brand" >Job Portal</p>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ url_for('main.index') }}">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.index') }}">Test Your Skills</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form method="POST" action="{{ url_for('auth.logout') }}">
+                <button class="btn btn-outline-danger justify-content-end" type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{#<form action="{{ url_for('main.index') }}" method="GET">#}
+{#    <button type="submit">#}
+{#        <input type="text" name="company" value="Infosys" hidden />#}
+{#    <div class="card">>#}
+{# <div class="container">#}
+{#    <b>Infosys</b>#}
+{#  </div>#}
+{#</div>#}
+{#    </button>#}
+{#</form>#}
+
+
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                    <h3>About {{ data.company_name }}</h3>
+    {{ data.company_data["about_company"] }}
+
+</div>
+
+<section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Overview</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                        {{ data.company_data["overview_company"] }}
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Hiring Criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                           {{ data.company_data["eligibility_criteria"] }}
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">graduation criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                           {{ data.company_data["graduation criteria"] }}
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">academic criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                           {{ data.company_data["academic criteria"] }}
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+
+  <section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Selection Process</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
+                           {{ data.company_data["selection process"] }}
+                   </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+    
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">Pattern</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       {{ data.company_data["pattern"] }}
+                   </div>
+                </div>
+            </div>
+        </section>
+<footer class="bg-dark text-center text-lg-start text-white" style="font-family:TIMES NEW ROMAN">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Student Tracker</h5>
+
+        <p>
+          Tracking
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <a href="/" class="text-white nav-link"><h5 class="text-uppercase ">Home</h5></a>
+
+        <ul class="list-unstyled mb-0">
+		
+          <li>
+            <a href="/menu" class="text-white nav-link">About us</a>
+          </li>
+          
+          <li>
+            <a href="/login" class="text-white nav-link">Login</a>
+          </li>
+		   <li>
+            <a href="/contact" class="text-white nav-link">Contact US</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0 text-white nav-link">Reach Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="text-white nav-link"><i style="font-size:1em;color:Tomato"class="fa fa-envelope " aria-hidden="true"></i>contactusatbonappetit@gmail.com</a>
+          </li>
+          <li>
+            <a href="#" class="text-white nav-link"><i style="font-size:1em;color:Tomato"class="fa fa-phone" aria-hidden="true"></i>161661166</a>
+          </li>
+          
+        </ul>
+		<form class="d-flex">
+      <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn" style="color:Tomato"type="submit">Search</button>
+    </form>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);font-family:TIMES NEW ROMAN;">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/" style="font-family:TIME NEW ROMAN">BONAppetit.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>
