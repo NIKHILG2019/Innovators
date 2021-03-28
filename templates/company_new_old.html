@@ -10,8 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="reviews.css">
-<meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
         .card {
@@ -19,26 +18,6 @@
   transition: 0.3s;
   width: 100%;
 }
-        h3{
-            font-size: 15px;
-        }
-
-h2{
-    padding-top: 20px;
-    font-size: 40px;
-    color: #1b1b1a;
-    font-weight: 800;
-    text-transform: uppercase;
-    position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: inline-block;
-	font-family: 'Merriweather';
-}
-.section-table{
-	font-size: 20px;
-	color:black;
-	font-family: 'Merriweather';
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -109,86 +88,11 @@ h2{
 
 
 
-<section >
-  <h1 class="heading text-center py-5">Reviews</h1>
-
-  <div class="container py-20" style="justify-content: space-between">
-    <div class="row" align="center">
-      <div class="col  px-10" align="center" style="align-content: center">
-        <img class="company_img " style="margin-top: 30px;" height="100" width="200" src="{{ data.company_data["company_image_url"] }}">
-      </div>
-{% if feedback %}
-          <div class="col " >
-      <div class="row">
-        <div class="col">
-          <h3 class="subheading">Work-life Balance</h3>
-          <div class="progress" style="height: 15px; width: 300px;">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width:{{ work_life_balance }}%" aria-valuenow="{{ work_life_balance }}" aria-valuemin="" aria-valuemax="100"></div>
-          </div>
-         </div>
-        <div class="col">
-          <h3 class="subheading">Types Of Projects</h3>
-          <div class="progress" style="height: 15px; width: 300px;">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {{ types_of_project }}%" aria-valuenow="{{ types_of_project }}" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-
-
-  <div class="row " style="justify-content: center">
-    <div class="col">
-      <h3 class="subheading">Work Culture</h3>
-      <div class="progress" style="height: 15px; width: 300px;">
-        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {{ work_culture }}%" aria-valuenow="{{ work_culture }}" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-</div>
-    <div class="col">
-      <h3 class="subheading">Pay</h3>
-      <div class="progress" style="height: 15px; width: 300px;">
-        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {{ pay }}%" aria-valuenow="{{ pay }}" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-</div>
-  </div>
-</div>
-    {% else %}
-    <h6 style="margin-top: 70px">No one has review this company</h6>
-    {% endif %}
-<div class="col">
-    {% if button_toggle %}
-    <form method="GET" action="{{ url_for('main.feedback') }}">
-        <input type="text" name="company_name" value="{{ data.company_name }}" hidden />
-  <button type="submit" class="btn btn-md ad_button my-10" style=" margin-top: 50px; background-color:orange">Add Feedback</button>
-    </form>
-        {% else %}
-        <h6 style="margin-top: 70px">You have reviewed this company</h6>
-
-    {% endif %}
-</div>
-</div>
-
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                    <h3>About {{ data.company_name }}</h3>
+    {{ data.company_data["about_company"] }}
 
 </div>
-  <div>
-
-  </div>
-</section>
-
-<section class="pricing-section sec_padding page-section" style="background-color:white">
-  <div class="container">
-      <div class="text-center pb-4">
-          <h2 class="second-heading text-black">About {{ data.company_name }}</h2>
-      </div>
-      <div class="row m-0"><!-- Ravinder -->
-         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
-             <div class="section-table"><!-- Ravinder -->
-              {{ data.company_data["about_company"] }}
-             </div>
-         </div>
-
-      </div>
-  </div>
-
-</section>
 
 <section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
             <div class="container">
@@ -215,11 +119,38 @@ h2{
                 <div class="row m-0"><!-- Ravinder -->
                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
                        <div class="section-table"><!-- Ravinder -->
-                        <h5> Eligibility Criteria </h5>
                            {{ data.company_data["eligibility_criteria"] }}
-                           <h5> Graduation Criteria </h5>
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">graduation criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
                            {{ data.company_data["graduation criteria"] }}
-                           <h5> Academic Criteria </h5>
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+
+        </section>
+    <section class="pricing-section sec_padding page-section" style="background-color:white">
+            <div class="container">
+                <div class="text-center pb-4">
+                    <h2 class="second-heading text-black">academic criteria</h2>
+                </div>
+                <div class="row m-0"><!-- Ravinder -->
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
+                       <div class="section-table"><!-- Ravinder -->
                            {{ data.company_data["academic criteria"] }}
                        </div>
                    </div>
@@ -228,7 +159,6 @@ h2{
             </div>
 
         </section>
-    
 
   <section class="pricing-section sec_padding page-section" style="background-color:#42f5e0">
             <div class="container">
@@ -254,9 +184,7 @@ h2{
                 </div>
                 <div class="row m-0"><!-- Ravinder -->
                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"><!-- Ravinder -->
-                    <div class="section-table">
                        {{ data.company_data["pattern"] }}
-                      </div>
                    </div>
                 </div>
             </div>

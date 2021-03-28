@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='feedback.css') }}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <p class="navbar-brand" >Project Title</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="register.html"><span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </nav>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" action="{{ url_for('main.feedback_post') }}" class="signup-form">
+                        <input type="text" value="{{ data }}" name="company_name" hidden />
+                        <h2 class="form-title">Feedback</h2>
+                        <div class="form-group">
+                            <label>Work-life Balance</label><br>
+                            <input required type="radio" id="1" name="work_life_balance" value="1">
+                            <label for="1">1</label>
+                            <input type="radio" id="2" name="work_life_balance" value="2">
+                            <label for="2">2</label>
+                            <input type="radio" id="3" name="work_life_balance" value="3">
+                            <label for="3">3</label>
+                            <input type="radio" id="4" name="work_life_balance" value="4">
+                            <label for="4">4</label>
+                            <input type="radio" id="5" name="work_life_balance" value="5">
+                            <label for="5">5</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Types Of Projects</label><br>
+                            <input required type="radio" id="1" name="types_of_projects" value="1">
+                            <label for="1">1</label>
+                            <input type="radio" id="2" name="types_of_projects" value="2">
+                            <label for="2">2</label>
+                            <input type="radio" id="3" name="types_of_projects" value="3">
+                            <label for="3">3</label>
+                            <input type="radio" id="4" name="types_of_projects" value="4">
+                            <label for="4">4</label>
+                            <input type="radio" id="5" name="types_of_projects" value="5">
+                            <label for="5">5</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Work Culture</label><br>
+                            <input required type="radio" id="1" name="work_culture" value="1">
+                            <label for="1">1</label>
+                            <input type="radio" id="2" name="work_culture" value="2">
+                            <label for="2">2</label>
+                            <input type="radio" id="3" name="work_culture" value="3">
+                            <label for="3">3</label>
+                            <input type="radio" id="4" name="work_culture" value="4">
+                            <label for="4">4</label>
+                            <input type="radio" id="5" name="work_culture" value="5">
+                            <label for="5">5</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Pay</label><br>
+                            <input required type="radio" id="1" name="pay" value="1">
+                            <label for="1">1</label>
+                            <input type="radio" id="2" name="pay" value="2">
+                            <label for="2">2</label>
+                            <input type="radio" id="3" name="pay" value="3">
+                            <label for="3">3</label>
+                            <input type="radio" id="4" name="pay" value="4">
+                            <label for="4">4</label>
+                            <input type="radio" id="5" name="pay" value="5">
+                            <label for="5">5</label>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
